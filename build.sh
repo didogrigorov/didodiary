@@ -7,7 +7,7 @@ cd sqlite-autoconf-3460100
 ./configure --prefix=/usr/local
 make
 make install
-
+cd ..
 # Exit on error
 set -o errexit
 
