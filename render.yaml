@@ -1,0 +1,14 @@
+FROM python:3.11.0
+
+# Install dependencies and SQLite
+RUN apt-get update && apt-get install -y \
+    sqlite3 \
+    libsqlite3-dev
+
+# Upgrade SQLite to the latest version (if needed)
+RUN wget https://www.sqlite.org/2023/sqlite-autoconf-3410000.tar.gz \
+    && tar -xvf sqlite-autoconf-3410000.tar.gz \
+    && cd sqlite-autoconf-3410000 \
+    && ./configure \
+    && make \
+    && make install
