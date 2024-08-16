@@ -7,6 +7,9 @@ cd sqlite-autoconf-3460100
 ./configure --prefix=/usr/local
 make
 make install
+export PATH=$HOME/opt/sqlite/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/opt/sqlite/lib
+export LD_RUN_PATH=$HOME/opt/sqlite/lib
 cd ..
 # Exit on error
 set -o errexit
