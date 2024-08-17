@@ -142,5 +142,8 @@ EMAIL_HOST_PASSWORD = 'A32sGbPMX9Z6hTzk'  # Your Brevo SMTP password
 DEFAULT_FROM_EMAIL = 'dido.grigorov@gmail.com'  # Default sender email address
 
 if not DEBUG:
-        STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-        STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
