@@ -34,9 +34,6 @@ class About(models.Model):
     content = RichTextUploadingField()
 
     def clean(self):
-        """
-        Ensure that only one instance of this model can be created.
-        """
         if not self.pk and About.objects.exists():
             raise ValidationError('There can only be one About Us Content!')
 

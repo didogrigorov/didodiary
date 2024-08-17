@@ -9976,3 +9976,7 @@ img {
   html:not(.no-js) [data-aos=flip-down].aos-animate {
     -webkit-transform: perspective(2500px) rotateX(0);
     transform: perspective(2500px) rotateX(0); } }
+
+.move-right {
+  margin-left: 5px;
+}
