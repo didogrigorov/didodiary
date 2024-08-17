@@ -82,6 +82,19 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 'auto',
+    },
+}
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads/')
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 
