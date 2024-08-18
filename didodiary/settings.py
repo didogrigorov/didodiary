@@ -105,7 +105,7 @@ STATICFILES_DIRS = [
 ]
 
 # Only needed in production when using `collectstatic`
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # WhiteNoise storage backend for static files in production
 
