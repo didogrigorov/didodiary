@@ -91,8 +91,8 @@ CKEDITOR_CONFIGS = {
         'width': 'auto',
     },
 }
-CKEDITOR_UPLOAD_PATH = "uploads/"
-CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+CKEDITOR_UPLOAD_PATH = 'media/uploads/'
+CKEDITOR_UPLOAD_PREFIX = 'media/uploads/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'
