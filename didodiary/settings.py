@@ -167,7 +167,7 @@ else:
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
-
+CSRF_COOKIE_DOMAIN = '.didogrigorov.me'
 CSRF_TRUSTED_ORIGINS = [
     "https://didogrigorov.me"
 ]
