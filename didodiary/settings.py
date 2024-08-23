@@ -165,3 +165,5 @@ else:
     STATIC_URL = '/staticfiles/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
