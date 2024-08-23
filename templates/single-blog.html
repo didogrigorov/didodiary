@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-
+{% block title %}{{ item.title }} - Dido Grigorov{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://didogrigorov.me/{{ item.slug }}/" />{% endblock %}
 {% block content %}
     <main class="container py-vh-3">
       <div class="row d-flex justify-content-center text-center">

@@ -34,6 +34,7 @@ class SingleBlogPostView(DetailView):
         context['next_post'] = next_post
         return context
 
+
 class ContactFormView(FormView):
     template_name = 'contact.html'  # Template to be used for rendering the form
     form_class = ContactForm  # Form class to use
@@ -55,8 +56,10 @@ class ContactFormView(FormView):
 
         return super().form_valid(form)
 
+
 class SuccessForm(TemplateView):
     template_name = 'contact-success.html'
+
 
 class AboutPage(DetailView):
     model = About
@@ -64,7 +67,6 @@ class AboutPage(DetailView):
     context_object_name = 'about'
 
     def get_object(self, queryset=None):
-
         if queryset is None:
             queryset = self.get_queryset()
 

@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html class="h-100" lang="en">
-
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -13,6 +12,7 @@
   <meta name="HandheldFriendly" content="true">
   <meta name="google-site-verification" content="6TlM8T0NZ26yMZwC6hGjw5x7u53-CnGoNaWF70Fp5ws" />
   <title>{% block title %}Dido Grigorov - AI Engineer | Machine Learning Engineer | Software Developer {% endblock %}</title>
+  {% block canonical %}<link rel="canonical" href="https://didogrigorov.me" />{% endblock %}
   <link rel="stylesheet" href="{% static 'css/theme.css' %}">
 
 <style>
@@ -77,7 +77,6 @@
 </svg>
   <span class="ms-1 mt-1 fw-bolder me-5">Dido Grigorov</span>
 </a>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -98,7 +97,6 @@
     </div>
 </div>
 </nav>
-
 
         {% block content %}
         <!-- Main content goes here -->
@@ -125,6 +123,5 @@
   </div>
   <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
 </footer>
-
   </body>
 </html>
