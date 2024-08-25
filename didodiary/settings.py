@@ -165,8 +165,8 @@ else:
     STATIC_URL = '/staticfiles/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# CSRF_COOKIE_SECURE = True
-# SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_DOMAIN = '.didogrigorov.me'
 CSRF_TRUSTED_ORIGINS = [
     "https://didogrigorov.me"
