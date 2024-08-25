@@ -13,7 +13,6 @@
   <meta name="google-site-verification" content="6TlM8T0NZ26yMZwC6hGjw5x7u53-CnGoNaWF70Fp5ws" />
   <title>{% block title %}Dido Grigorov - AI Engineer | Machine Learning Engineer | Software Developer {% endblock %}</title>
   {% block canonical %}<link rel="canonical" href="https://didogrigorov.me" />{% endblock %}
-  <link rel="stylesheet" href="{% static 'css/theme.css' %}">
 
 <style>
 /* inter-300 - latin */
@@ -121,7 +120,8 @@
     </g>
 </svg><a href="https://www.python.org/" class="link-fancy move-right" target="_blank" rel="nofollow">Python</a>
   </div>
-  <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+  <script src="{% static 'js/bootstrap.js' %}"></script>
 </footer>
   </body>
 </html>
