@@ -171,3 +171,6 @@ CSRF_COOKIE_DOMAIN = '.didogrigorov.me'
 CSRF_TRUSTED_ORIGINS = [
     "https://didogrigorov.me"
 ]
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_RESTRICT_BY_USER = True
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
