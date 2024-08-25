@@ -158,7 +158,8 @@ if USE_S3:
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     PUBLIC_MEDIA_LOCATION = 'media'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
-    DEFAULT_FILE_STORAGE = 'diary.storage_backends.PublicMediaStorage'
+    # DEFAULT_FILE_STORAGE = 'diary.storage_backends.PublicMediaStorage'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     # MEDIA_URL = 'https://mydiary.s3.amazonaws.com/media/'
     # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 else:
@@ -171,4 +172,3 @@ CSRF_COOKIE_DOMAIN = '.didogrigorov.me'
 CSRF_TRUSTED_ORIGINS = [
     "https://didogrigorov.me"
 ]
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
