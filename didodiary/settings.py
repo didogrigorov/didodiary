@@ -171,3 +171,4 @@ CSRF_COOKIE_DOMAIN = '.didogrigorov.me'
 CSRF_TRUSTED_ORIGINS = [
     "https://didogrigorov.me"
 ]
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
