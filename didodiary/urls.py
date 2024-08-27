@@ -16,8 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.sitemaps import GenericSitemap
+from django.contrib.sitemaps.views import sitemap
 
+from diary.models import BlogPost
+
+all_posts = {
+    "queryset": BlogPost.objects.all(),
+    "date_field": "date_updated"
+}
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('diary.urls')),
+    path('sitemap.xml', sitemap, {'sitemaps': {"blog_posts": GenericSitemap(all_posts)}}),
 ]
