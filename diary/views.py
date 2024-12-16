@@ -48,10 +48,11 @@ class ContactFormView(FormView):
 
         # Sending the email
         send_mail(
-            subject=f'Message from my diary',
-            message=message,
-            from_email=email,
-            recipient_list=[settings.EMAIL_HOST_USER],
+            subject=f'Message from My Diary',
+            message=f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}",  # Include user details in the message
+            from_email=settings.DEFAULT_FROM_EMAIL,  # Use a verified sender email from settings
+            recipient_list=['dido.grigorov@gmail.com'],  # Replace with your recipient email
+            fail_silently=False,
         )
 
         return super().form_valid(form)

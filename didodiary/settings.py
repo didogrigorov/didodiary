@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', get_random_secret_key())
-DEBUG = False
+
 ALLOWED_HOSTS = ['*']
 
 # Application definition
@@ -115,14 +115,23 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Email Sending Settings
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp-relay.brevo.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'dido.grigorov@yahoo.com')
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'A32sGbPMX9Z6hTzk')
+# DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'dido.grigorov@gmail.com')
+
+# Email settings for SendGrid
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp-relay.brevo.com'
+EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'dido.grigorov@yahoo.com')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'A32sGbPMX9Z6hTzk')
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'dido.grigorov@gmail.com')
-
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = os.getenv('SENDGRID_API')
+DEFAULT_FROM_EMAIL = 'dido.grigorov@gmail.com'
+DEFAULT_TO_EMAIL = 'dido.grigorov@gmail.com'
 # Logging configuration
 # LOGGING = {
 #     'version': 1,
